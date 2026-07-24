@@ -69,8 +69,11 @@ An interactive, web-based Data Structure Laboratory built with React, TypeScript
 
 ```
 .
+├── .github/workflows/      # Automated GitHub Pages CI/CD workflow
+│   └── deploy.yml
 ├── index.html              # Main HTML entry point
 ├── package.json            # Project dependencies and scripts
+├── GITHUB_PAGES_GUIDE.md   # Detailed GitHub Pages Publishing Guide
 ├── src/
 │   ├── main.tsx            # Application React entry point
 │   ├── App.tsx             # Main App layout and tab routing
@@ -93,6 +96,30 @@ An interactive, web-based Data Structure Laboratory built with React, TypeScript
     ├── style.css
     └── script.js
 ```
+
+---
+
+## 🚀 GitHub Pages Publishing
+
+This project is pre-configured for automated single-click deployment to **GitHub Pages**.
+
+1. **Push to GitHub**:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Go to Repository **Settings** → **Pages**.
+   - Under **Source**, select **GitHub Actions**.
+
+The included `.github/workflows/deploy.yml` workflow will automatically build and publish the live site whenever you push to `main`.
+
+For complete instructions (including `gh-pages` CLI and Standalone modes), refer to the [GitHub Pages Publishing Guide](GITHUB_PAGES_GUIDE.md).
 
 ---
 
