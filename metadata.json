@@ -1,0 +1,6 @@
+{
+  "name": "Stack Visualizer",
+  "description": "Learn and practice Data Structures Stack operations with interactive animations, code visualization, quizzes, and challenge mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

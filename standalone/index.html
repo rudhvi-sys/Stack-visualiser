@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standalone Stack Visualizer - Vanilla JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Standalone Stack Visualizer</h1>
+      <p>Interactive LIFO (Last In, First Out) Data Structure Simulator</p>
+    </header>
+
+    <main>
+      <div class="controls-card">
+        <div class="input-group">
+          <input type="text" id="stackInput" placeholder="Enter value (e.g. 42)" autocomplete="off" />
+          <button id="pushBtn" class="btn btn-primary">Push (LIFO Push)</button>
+          <button id="popBtn" class="btn btn-danger">Pop (LIFO Pop)</button>
+          <button id="peekBtn" class="btn btn-secondary">Peek (Top)</button>
+          <button id="clearBtn" class="btn btn-outline">Clear</button>
+        </div>
+
+        <div class="settings-group">
+          <label for="capacityInput">Stack Capacity:</label>
+          <input type="number" id="capacityInput" value="8" min="3" max="15" />
+          
+          <label class="checkbox-label">
+            <input type="checkbox" id="soundToggle" checked /> Sound Effects
+          </label>
+        </div>
+      </div>
+
+      <div class="workspace">
+        <div class="stack-section">
+          <h3>Stack Canvas (Top = Entry/Exit)</h3>
+          <div class="stack-container" id="stackContainer">
+            <div class="empty-state" id="emptyState">Stack is currently empty</div>
+          </div>
+          <div class="stack-info" id="stackInfo">Size: 0 / 8</div>
+        </div>
+
+        <div class="log-section">
+          <h3>Operation Log</h3>
+          <ul class="log-list" id="logList">
+            <li class="log-item info">Stack initialized with capacity 8.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Standalone LIFO Stack Visualizer &copy; 2026</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
